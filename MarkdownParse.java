@@ -12,6 +12,7 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then read link up to next )
         int currentIndex = 0;
         System.out.println("markdown length " + markdown.length());
+        System.out.println("AAA");
         while(currentIndex < markdown.length()) {
             
             int openBracket = markdown.indexOf("[", currentIndex);
@@ -28,7 +29,8 @@ public class MarkdownParse {
             if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
             {
                 currentIndex = markdown.length();
-                
+                System.out.println("error");
+                //break;
             }
             else
             {
@@ -48,5 +50,6 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
+        System.out.println("SCREAMIN");
     }
 }
