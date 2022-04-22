@@ -1,2 +1,2 @@
-[link](google.com)
-[failedLink](
+[link](fef)
+[failedLink]

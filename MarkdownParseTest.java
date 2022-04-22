@@ -8,13 +8,11 @@ import java.io.IOException;
 public class MarkdownParseTest {
     @Test
     public void addition() {
-        assertEquals(2, 1 + 1);
+        //assertEquals(2, 1 + 1);
         //javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java
-        //java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
-
-        
-        
+        //java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest    
     }
+    
     @Test
     public void getLinksTest() throws IOException
     {
@@ -28,10 +26,11 @@ public class MarkdownParseTest {
         
     }
 
+
     @Test
     public void getLinksTest2() throws IOException
     {
-        List somethingList = List.of("https://www.nintendo.com", "htps/ucsd-cse11-f21.githb.io/syllabus.html//", "hp(");
+        List somethingList = List.of("https://www.nintendo.com");
         MarkdownParse mP = new MarkdownParse();
         Path p = Path.of("Test-file2.md");
         String Content = Files.readString(p);
@@ -40,6 +39,7 @@ public class MarkdownParseTest {
 
         
     }
+
 
     @Test
     public void getLinksTest3() throws IOException
@@ -53,6 +53,8 @@ public class MarkdownParseTest {
 
         
     }
+    
+    /*
     public void getLinksTest4() throws IOException
     {
         List somethingList = List.of("fef");
@@ -64,4 +66,5 @@ public class MarkdownParseTest {
 
         
     }
+    */
 }

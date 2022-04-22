@@ -36,6 +36,7 @@ public class MarkdownParse {
                 System.out.println("error");
                 break;
             }
+            
             else
             {
             toReturn.add(markdown.substring(openParen + 1, closeParen));
