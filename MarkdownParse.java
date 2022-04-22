@@ -30,7 +30,7 @@ public class MarkdownParse {
             System.out.println("closeParen" + closeParen);
             //this if and else statemetn checks to see if the open and close brackets
             //and paren exists
-        /*
+        
             if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
             {
                 currentIndex = markdown.length();
@@ -44,12 +44,9 @@ public class MarkdownParse {
             currentIndex = closeParen + 1;
             System.out.println("curIndx" +currentIndex);
             }
-        */
+        
 
-        toReturn.add(markdown.substring(openParen + 1, closeParen));
-            
-            currentIndex = closeParen + 1;
-            System.out.println("curIndx" +currentIndex);
+        
 
         infLoop++;
         if(infLoop > 100)
