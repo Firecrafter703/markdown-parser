@@ -53,4 +53,15 @@ public class MarkdownParseTest {
 
         
     }
+    public void getLinksTest4() throws IOException
+    {
+        List somethingList = List.of("fef");
+        MarkdownParse mP = new MarkdownParse();
+        Path p = Path.of("test-file4.md");
+        String Content = Files.readString(p);
+        ArrayList<String> output = mP.getLinks(Content);
+        assertEquals(somethingList, output);
+
+        
+    }
 }

@@ -11,9 +11,13 @@ public class MarkdownParse {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link up to next )
         int currentIndex = 0;
+        int infLoop = 0;
         System.out.println("markdown length " + markdown.length());
         System.out.println("AAA");
-        while(currentIndex < markdown.length()) {
+
+
+        while(currentIndex < markdown.length()) 
+        {
             
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
@@ -26,6 +30,7 @@ public class MarkdownParse {
             System.out.println("closeParen" + closeParen);
             //this if and else statemetn checks to see if the open and close brackets
             //and paren exists
+        /*
             if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
             {
                 currentIndex = markdown.length();
@@ -39,6 +44,18 @@ public class MarkdownParse {
             currentIndex = closeParen + 1;
             System.out.println("curIndx" +currentIndex);
             }
+        */
+
+        toReturn.add(markdown.substring(openParen + 1, closeParen));
+            
+            currentIndex = closeParen + 1;
+            System.out.println("curIndx" +currentIndex);
+
+        infLoop++;
+        if(infLoop > 100)
+        {
+            break;
+        }
         }
         System.out.println(toReturn);
         return toReturn;
