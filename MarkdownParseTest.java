@@ -23,11 +23,12 @@ public class MarkdownParseTest {
         String Content = Files.readString(p);
         ArrayList<String> output = mP.getLinks(Content);
         assertEquals(somethingList, output);
+        assertEquals(2,2);
 
         
     }
 
-
+    
     @Test
     public void getLinksTest2() throws IOException
     {
