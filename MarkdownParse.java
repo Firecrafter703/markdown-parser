@@ -28,6 +28,7 @@ public class MarkdownParse {
             System.out.println("closeBracket" + closeBracket);
             System.out.println("openParen" + openParen);
             System.out.println("closeParen" + closeParen);
+            System.out.println("markdownParse change");
             //this if and else statemetn checks to see if the open and close brackets
             //and paren exists
             if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
