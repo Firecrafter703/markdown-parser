@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParse {
-
+//~/.ssh/config
     public static ArrayList<String> getLinks(String markdown) {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link up to next )
@@ -29,6 +29,8 @@ public class MarkdownParse {
             System.out.println("openParen" + openParen);
             System.out.println("closeParen" + closeParen);
             System.out.println("markdownParse change");
+            System.out.println("part2
+            ");
             //this if and else statemetn checks to see if the open and close brackets
             //and paren exists
             if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
