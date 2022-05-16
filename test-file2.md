@@ -1,6 +1,2 @@
-# Title
-
-[a link!](https://something.com)
-[another link!](some-page.html)
-
-some paragraph text after the links
+[link3](https://www.nintendo.com)
+[link4(htps/ucsd-cse11-f21.githb.io/syllabus.html//)
