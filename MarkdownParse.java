@@ -15,31 +15,12 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-<<<<<<< HEAD
-        
-            System.out.println("openBracket" + openBracket);
-            System.out.println("closeBracket" + closeBracket);
-            System.out.println("openParen" + openParen);
-            System.out.println("closeParen" + closeParen);
-            System.out.println("markdownParse change");
-            System.out.println("part2
-            ");
-            //this if and else statemetn checks to see if the open and close brackets
-            //and paren exists
-            if(openBracket == -1 || closeBracket == -1 ||openParen == -1|| closeParen == -1)
-            {// ssh-add ~/.ssh/id_ed25519
-                //ssh-keygen -t ed25519-sk -C "your_email@example.com"
-                currentIndex = markdown.length();
-                System.out.println("error");
-                break;
-=======
 
             // Malformed construct and trailing whitespace fix
             if (openBracket == -1 || closeBracket == -1 ||
                     openParen == -1 || closeParen == -1) {
                 currentIndex++;
                 continue;
->>>>>>> c9aad7a02fd2dd72667790982f6260c5137a7666
             }
 
             // Image reference fix
